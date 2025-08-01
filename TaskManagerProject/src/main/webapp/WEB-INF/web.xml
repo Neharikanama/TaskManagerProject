@@ -1,14 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app id="WebApp_ID" version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
-	<display-name>TaskManagerProject</display-name>
-	<welcome-file-list>
-		<welcome-file>index.html</welcome-file>
-		<welcome-file>index.htm</welcome-file>
-		<welcome-file>index.jsp</welcome-file>
-		<welcome-file>index.xhtml</welcome-file>
-		<welcome-file>default.html</welcome-file>
-		<welcome-file>default.htm</welcome-file>
-		<welcome-file>default.jsp</welcome-file>
-		<welcome-file>default.xhtml</welcome-file>
-	</welcome-file-list>
+<web-app id="WebApp_ID" version="2.4"
+         xmlns="http://java.sun.com/xml/ns/j2ee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+
+    <display-name>TaskManagerProject</display-name>
+
+    <!-- Welcome files -->
+    <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+        <welcome-file>index.htm</welcome-file>
+        <welcome-file>index.jsp</welcome-file>
+        <welcome-file>index.xhtml</welcome-file>
+        <welcome-file>default.html</welcome-file>
+        <welcome-file>default.htm</welcome-file>
+        <welcome-file>default.jsp</welcome-file>
+        <welcome-file>default.xhtml</welcome-file>
+    </welcome-file-list>
+
+    <!-- Context parameter for API Key -->
+    <context-param>
+        <param-name>API_KEY</param-name>
+        <param-value>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</param-value>
+    </context-param>
+
+    <!-- Servlet Declaration -->
+    <servlet>
+        <servlet-name>GenerateTasksServlet</servlet-name>
+        <servlet-class>com.TaskManagerProject.servlet.GenerateTasksServlet</servlet-class>
+    </servlet>
+
+    <!-- Servlet Mapping -->
+    <servlet-mapping>
+        <servlet-name>GenerateTasksServlet</servlet-name>
+        <url-pattern>/GenerateTasksServlet</url-pattern>
+    </servlet-mapping>
+
 </web-app>
